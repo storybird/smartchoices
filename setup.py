@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='smartchoices',
-    version='1.0',
+    version='1.0.1',
     description='A smart choices interface for Django apps',
     author='Storybird Developers',
     author_email='dev@storybird.com',

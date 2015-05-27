@@ -12,18 +12,18 @@ represent key/value pairs. The utilities here help make that a bit easier.
 To use, implement a `Choices` class like this:
 
 ```python
-    class KennyRogers(choices.Choices):
-        HOLD_EM = choices.Choice()
-        FOLD_EM = choices.Choice()
-        WALK_AWAY = choices.Choice()
-        RUN = choices.Choice()
+    class KennyRogers(smartchoices.Choices):
+        HOLD_EM = smartchoices.Choice()
+        FOLD_EM = smartchoices.Choice()
+        WALK_AWAY = smartchoices.Choice()
+        RUN = smartchoices.Choice()
 ```
 
 Then reference it in a model choices field like this:
 
     gambler = models.IntegerField(choices=KennyRogers.choices)
 
-All values provided from a smartchoices Choices object will be intergers, so
+All values provided from a smartchoices Choices object will be integers, so
 the Django field needs to be an `IntegerField`. This is smarter for your database, too.
 
 ### Smart names
@@ -38,10 +38,10 @@ them in the Choice creation, like so:
 Or you may turn on `smart_names` in the Meta class of the Choices object like this:
 
 ```python
-    class TypingClass(choices.Choices):
+    class TypingClass(smartchoices.Choices):
         class Meta:
             smart_names = True
-        THE_QUICK_BROWN_FOX = choices.CHOICE()
+        THE_QUICK_BROWN_FOX = smartchoices.CHOICE()
 ```
 
 ### Set values like an enum
@@ -49,14 +49,14 @@ Or you may turn on `smart_names` in the Meta class of the Choices object like th
 Just like enums, you may also choose to manually set the value of a choice.
 
 ```python
-    class JayZProblems(choices.Choices):
-        FOES_THAT_WANNA_MAKE_SURE_MY_CASKETS_CLOSED = choices.Choice()
-        YOUNG = choices.Choice()
-        BLACK = choices.Choice()
-        HATS_REAL_LOW = choices.Choice()
+    class JayZProblems(smartchoices.Choices):
+        FOES_THAT_WANNA_MAKE_SURE_MY_CASKETS_CLOSED = smartchoices.Choice()
+        YOUNG = smartchoices.Choice()
+        BLACK = smartchoices.Choice()
+        HATS_REAL_LOW = smartchoices.Choice()
 
-        THE_B_WORD = choices.Choice(100)
-        MONEY = choices.Choice()
+        THE_B_WORD = smartchoices.Choice(100)
+        MONEY = smartchoices.Choice()
 ```
 
 Just like an enum, the counting starts 0, 1, 2, 3 and then jumps to 100, and continues on
