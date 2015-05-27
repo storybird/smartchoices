@@ -1,6 +1,6 @@
 #  Smart Choices
 
-## A better choice interface for Django apps
+## A better choices interface for Django apps
 
 
 A common Django pattern is to create this complicated tuple list of tuples that
