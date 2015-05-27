@@ -9,7 +9,7 @@ setup(
     author_email='dev@storybird.com',
     url='https://github.com/storybird/smartchoices',
     license='MIT',
-    modules=('smartchoices',),
+    py_modules=('smartchoices',),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
