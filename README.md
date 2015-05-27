@@ -24,7 +24,7 @@ Then reference it in a model choices field like this:
     gambler = models.IntegerField(choices=KennyRogers.choices)
 
 All values provided from a smartchoices Choices object will be intergers, so
-the Django field needs to be an `IntegerField`. This is smarted for your database, too.
+the Django field needs to be an `IntegerField`. This is smarter for your database, too.
 
 ### Smart names
 
